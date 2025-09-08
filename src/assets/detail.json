@@ -1,0 +1,276 @@
+[
+    {
+        "id": 1,
+        "categoryType": 1,
+        "category": "정원 /마당 시공",
+        "title": "모던 정원 시공",
+        "subTitle": "심플한 디자인의 마당 조성",
+        "images": [
+            "/images/dasuwon1.jpeg",
+            "/images/dasuwon2.jpeg",
+            "/images/dasuwon3.jpeg"
+        ],
+        "date": "2024-03-10"
+    },
+    {
+        "id": 2,
+        "categoryType": 1,
+        "category": "정원 /마당 시공",
+        "title": "전통 한옥 마당",
+        "subTitle": "한국식 전통 마당 시공",
+        "image": "/images/dasuwon2.jpeg",
+        "date": "2024-02-18"
+    },
+    {
+        "id": 3,
+        "categoryType": 1,
+        "category": "옥상 정원",
+        "title": "옥상 녹화 프로젝트",
+        "subTitle": "도심 속 자연 공간 조성",
+        "image": "/images/dasuwon3.jpeg",
+        "date": "2024-01-25"
+    },
+    {
+        "id": 4,
+        "categoryType": 1,
+        "category": "옥상 정원",
+        "title": "카페 옥상 정원",
+        "subTitle": "휴식과 만남의 공간",
+        "image": "/images/dasuwon4.jpeg",
+        "date": "2023-12-30"
+    },
+    {
+        "id": 5,
+        "categoryType": 1,
+        "category": "석재 / 목재 시설물",
+        "title": "목재 데크 시공",
+        "subTitle": "야외 테라스 데크 설치",
+        "image": "/images/dasuwon5.jpeg",
+        "date": "2023-12-10"
+    },
+    {
+        "id": 6,
+        "categoryType": 1,
+        "category": "석재 / 목재 시설물",
+        "title": "석재 계단 조성",
+        "subTitle": "고급스러운 정원 계단",
+        "image": "/images/dasuwon6.jpeg",
+        "date": "2023-11-22"
+    },
+    {
+        "id": 7,
+        "categoryType": 1,
+        "category": "조명 및 조경 소품",
+        "title": "야간 조명 연출",
+        "subTitle": "분위기 있는 정원 조명",
+        "image": "/images/dasuwon7.jpeg",
+        "date": "2023-11-05"
+    },
+    {
+        "id": 8,
+        "categoryType": 1,
+        "category": "조명 및 조경 소품",
+        "title": "조경 소품 배치",
+        "subTitle": "포인트 오브제 활용",
+        "image": "/images/dasuwon8.jpeg",
+        "date": "2023-10-18"
+    },
+    {
+        "id": 9,
+        "categoryType": 1,
+        "category": "기초 / 토목공사",
+        "title": "배수로 시공",
+        "subTitle": "정원 내 배수 시스템 구축",
+        "image": "/images/dasuwon9.jpeg",
+        "date": "2023-10-01"
+    },
+    {
+        "id": 10,
+        "categoryType": 1,
+        "category": "기초 / 토목공사",
+        "title": "잔디밭 기초공사",
+        "subTitle": "튼튼한 잔디밭 조성",
+        "image": "/images/dasuwon10.jpeg",
+        "date": "2023-09-15"
+    },
+    {
+        "id": 11,
+        "categoryType": 2,
+        "category": "관목",
+        "title": "철쭉 식재",
+        "subTitle": "봄을 알리는 관목 식재",
+        "image": "/images/dasuwon11.jpeg",
+        "date": "2023-09-01"
+    },
+    {
+        "id": 12,
+        "categoryType": 2,
+        "category": "관목",
+        "title": "회양목 조경",
+        "subTitle": "정원 경계용 관목",
+        "image": "/images/dasuwon12.jpeg",
+        "date": "2023-08-20"
+    },
+    {
+        "id": 13,
+        "categoryType": 2,
+        "category": "교목",
+        "title": "느티나무 식재",
+        "subTitle": "그늘을 만드는 교목",
+        "image": "/images/dasuwon1.jpeg",
+        "date": "2023-08-01"
+    },
+    {
+        "id": 14,
+        "categoryType": 2,
+        "category": "교목",
+        "title": "은행나무 식재",
+        "subTitle": "가을이 아름다운 교목",
+        "image": "/images/dasuwon2.jpeg",
+        "date": "2023-07-15"
+    },
+    {
+        "id": 15,
+        "categoryType": 2,
+        "category": "수목류",
+        "title": "소나무 조경",
+        "subTitle": "한국적 분위기의 소나무",
+        "image": "/images/dasuwon3.jpeg",
+        "date": "2023-07-01"
+    },
+    {
+        "id": 16,
+        "categoryType": 2,
+        "category": "수목류",
+        "title": "단풍나무 식재",
+        "subTitle": "계절감 있는 수목",
+        "image": "/images/dasuwon4.jpeg",
+        "date": "2023-06-20"
+    },
+    {
+        "id": 17,
+        "categoryType": 2,
+        "category": "초화류",
+        "title": "라벤더 화단",
+        "subTitle": "향기로운 초화류 식재",
+        "image": "/images/dasuwon5.jpeg",
+        "date": "2023-06-01"
+    },
+    {
+        "id": 18,
+        "categoryType": 2,
+        "category": "초화류",
+        "title": "튤립 정원",
+        "subTitle": "봄을 알리는 튤립",
+        "image": "/images/dasuwon6.jpeg",
+        "date": "2023-05-15"
+    },
+    {
+        "id": 19,
+        "categoryType": 2,
+        "category": "잔디",
+        "title": "잔디밭 시공",
+        "subTitle": "넓은 잔디 공간 조성",
+        "image": "/images/dasuwon7.jpeg",
+        "date": "2023-05-01"
+    },
+    {
+        "id": 20,
+        "categoryType": 2,
+        "category": "잔디",
+        "title": "고급 잔디 식재",
+        "subTitle": "관리 쉬운 잔디밭",
+        "image": "/images/dasuwon8.jpeg",
+        "date": "2023-04-20"
+    },
+    {
+        "id": 21,
+        "categoryType": 2,
+        "category": "특수 식물",
+        "title": "선인장 정원",
+        "subTitle": "건조한 환경의 특수 식물",
+        "image": "/images/dasuwon9.jpeg",
+        "date": "2023-04-01"
+    },
+    {
+        "id": 22,
+        "categoryType": 2,
+        "category": "특수 식물",
+        "title": "수생식물 연못",
+        "subTitle": "연못과 특수 식물 조성",
+        "image": "/images/dasuwon10.jpeg",
+        "date": "2023-03-15"
+    },
+    {
+        "id": 23,
+        "categoryType": 1,
+        "category": "정원 /마당 시공",
+        "title": "패밀리 가든",
+        "subTitle": "가족을 위한 마당 시공",
+        "image": "/images/dasuwon11.jpeg",
+        "date": "2023-03-01"
+    },
+    {
+        "id": 24,
+        "categoryType": 1,
+        "category": "옥상 정원",
+        "title": "옥상 바비큐장",
+        "subTitle": "도심 속 바비큐 공간",
+        "image": "/images/dasuwon12.jpeg",
+        "date": "2023-02-15"
+    },
+    {
+        "id": 25,
+        "categoryType": 1,
+        "category": "석재 / 목재 시설물",
+        "title": "정원 벤치 설치",
+        "subTitle": "휴식 공간 조성",
+        "image": "/images/dasuwon1.jpeg",
+        "date": "2023-02-01"
+    },
+    {
+        "id": 26,
+        "categoryType": 1,
+        "category": "조명 및 조경 소품",
+        "title": "정원 분수대",
+        "subTitle": "물소리와 함께하는 정원",
+        "image": "/images/dasuwon2.jpeg",
+        "date": "2023-01-15"
+    },
+    {
+        "id": 27,
+        "categoryType": 2,
+        "category": "관목",
+        "title": "진달래 식재",
+        "subTitle": "봄꽃이 아름다운 관목",
+        "image": "/images/dasuwon3.jpeg",
+        "date": "2023-01-01"
+    },
+    {
+        "id": 28,
+        "categoryType": 2,
+        "category": "교목",
+        "title": "자작나무 식재",
+        "subTitle": "밝고 산뜻한 분위기",
+        "image": "/images/dasuwon4.jpeg",
+        "date": "2022-12-15"
+    },
+    {
+        "id": 29,
+        "categoryType": 2,
+        "category": "초화류",
+        "title": "수국 화단",
+        "subTitle": "여름철 인기 초화류",
+        "image": "/images/dasuwon5.jpeg",
+        "date": "2022-12-01"
+    },
+    {
+        "id": 30,
+        "categoryType": 2,
+        "category": "특수 식물",
+        "title": "열대식물 온실",
+        "subTitle": "이국적인 분위기의 온실",
+        "image": "/images/dasuwon6.jpeg",
+        "date": "2022-11-15"
+    }
+]

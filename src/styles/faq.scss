@@ -1,0 +1,144 @@
+#faq,
+#faqdetail {
+    min-height: 400px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 700px;
+    align-items: center;
+}
+
+.faq-item {
+    margin-bottom: 0;
+}
+
+.faq-q {
+   @include regular-font();
+    margin-bottom: 4px;
+    color: $color-font-1;
+}
+
+.faq-a {
+     @include regular-font();
+    color: $color-font-2;
+    margin-left: 15px;
+}
+
+.faq-more-btn {
+     @include regular-font();
+    color: $color-font-2;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 12px;
+    margin-top: 8px;
+    justify-content: flex-end;
+}
+
+.faqdetail-container {
+    max-width: 700px;
+    margin: 48px auto 0 auto;
+    padding: 0 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.faqdetail-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 32px;
+    width: 100%;
+    max-width: 800px;
+    gap: 18px;
+}
+.faqdetail-header h1 {
+      @include large-font();
+    color: $color-font-1;
+    margin: 0;
+    letter-spacing: -1px;
+    margin-right: auto;
+}
+.faqdetail-count {
+  @include regular-font();
+    color: $color-font-2;
+   
+    margin-right: 12px;
+}
+.faq-item {
+    background: #f8faf8;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px 0 rgba(60, 80, 60, 0.06);
+}
+.faq-q {
+    @include regular-font();
+
+    color: #25613e;
+    margin-bottom: 8px;
+}
+.faq-a {
+     @include regular-font();
+    
+    margin-left: 18px;
+    line-height: 2;
+}
+.faq-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 0 0;
+    gap: 8px;
+}
+
+.faq-page-btn {
+    margin: 0 4px;
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: #fff;
+   @include regular-font();
+   color: $color-font-2;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border 0.15s;
+}
+
+.faq-page-btn.active,
+.faq-page-btn:focus {
+    background: #25613e;
+    color: #fff;
+    font-weight: bold;
+    border: 1.5px solid #25613e;
+}
+
+.faq-page-btn:hover:not(.active) {
+    background: #e6f2e6;
+    color: #25613e;
+    border: 1.5px solid #b6d6c2;
+}
+
+@media (max-width: 700px) {
+    #faq,
+    #faqdetail {
+        padding: 20px 0 0 10px !important;
+    }
+    .faq-list {
+        max-width: 100%;
+        gap: 16px;
+    }
+    .faq-q {
+        font-size: 16px;
+    }
+    .faq-a {
+        font-size: 13px;
+    }
+}

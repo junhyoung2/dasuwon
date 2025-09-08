@@ -1,0 +1,68 @@
+#pnumber {
+  text-align: center;
+  margin: 32px 0 0 0;
+}
+
+#pnumber h2 {
+  @include large-font();
+  margin-bottom: 18px;
+}
+
+.pnumber-desc {
+  @include regular-font();
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.pnumber-img-wrap {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.p-img {
+  width: 900px;
+  max-width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+.pnumber-img-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  pointer-events: none;
+  line-height: 1.7;
+}
+
+.pnumber-phone {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1000px) {
+  .p-img {
+    width: 100%;
+    height: 220px;
+  }
+  .pnumber-img-text {
+    font-size: 16px;
+  }
+  .pnumber-phone {
+    font-size: 18px;
+  }
+}
