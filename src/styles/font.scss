@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+@mixin large-font {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+@mixin medium-font {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@mixin regular-font {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}

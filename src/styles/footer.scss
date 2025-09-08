@@ -1,0 +1,58 @@
+#footer {
+    width: 100%;
+    padding: 48px 0 0 0;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.footer-title {
+    text-align: center;
+    @include large-font();
+    margin-bottom: 32px;
+}
+
+.footer-map-wrap {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto 40px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.footer-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    width: 90%;
+    max-width: 1400px;
+    margin: 32px auto 0 auto;
+}
+
+.footer-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo-img {
+    height: 56px;
+    width: auto;
+}
+
+.footer-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 16px;
+    font-family: "Noto Sans KR", sans-serif;
+    margin-top: 8px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin: 40px 0 0 0;
+    font-size: 15px;
+    color: #222;
+    font-family: "Noto Sans KR", sans-serif;
+}

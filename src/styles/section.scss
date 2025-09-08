@@ -1,0 +1,84 @@
+#section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 0 0 0;
+    box-sizing: border-box;
+}
+
+#section > h2 {
+    @include large-font();
+    margin-bottom: 16px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.more-btn {
+    background: none;
+    border: none;
+    color:$color-font-2;
+    @include regular-font();
+    cursor: pointer;
+    padding: 0;
+}
+
+
+.section-contents {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.sction-1,
+.sction-2,
+.sction-3,
+.sction-4,
+.sction-5 {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #dbdbdb;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    margin-bottom: 16px;
+}
+
+.sction-1 span,
+.sction-2 span,
+.sction-3 span,
+.sction-4 span,
+.sction-5 span {
+    @include medium-font();
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.sction-1 p,
+.sction-2 p,
+.sction-3 p,
+.sction-4 p,
+.sction-5 p {
+    @include regular-font();
+    color:$color-font-2;
+    margin: 0;
+    margin-left: 0;
+}
+
+@media (max-width: 1100px) {
+    .section-contents {
+        flex-direction: column;
+        gap: 32px;
+    }
+}

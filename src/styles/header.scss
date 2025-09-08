@@ -1,0 +1,45 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    gap: 130px;
+    background: #fff;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 56px;
+    width: auto;
+    cursor: pointer;
+}
+
+.search-area {
+    display: flex;
+    align-items: center;
+    border: 2px solid #3a7d44;
+    border-radius: 25px;
+    padding: 5px 35px;
+    width: 600px;
+    height: 40px;
+    background: #fff;
+}
+
+.search-icon {
+    color: $color-primary;
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    @include regular-font();
+    width: 100%;
+    background: transparent;
+}

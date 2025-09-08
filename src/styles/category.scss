@@ -1,0 +1,21 @@
+#category {
+  width: 100%;
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin-top: 32px;
+@include regular-font();
+  color: #222;
+}
+
+.category span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.category span:hover {
+  color: $color-primary;
+}
