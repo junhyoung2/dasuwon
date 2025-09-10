@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import detailData from "../assets/detail.json";
@@ -33,6 +33,14 @@ const Search = () => {
   const [selectedCat1, setSelectedCat1] = useState("전체");
   const [selectedCat2, setSelectedCat2] = useState("전체");
   const [page, setPage] = useState(1);
+   useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
+  // 모바일 환경 감지
+  const isMobile = window.innerWidth <= 430;
+  const [cat1Open, setCat1Open] = useState(false);
+  const [cat2Open, setCat2Open] = useState(false);
 
   // 필터링
   const filtered = detailData.filter(item => {
@@ -60,33 +68,94 @@ const Search = () => {
       <Header />
       <Category/>
       <div className="search-wrap">
-        {/* 좌측 필터 */}
-        <aside className="search-filter">
-          <div className="filter-group">
-            <div className="filter-label">시공별 카테고리</div>
-            {CATEGORY1.map(cat => (
-              <div
-                key={cat}
-                className={`filter-item${selectedCat1 === cat ? " active" : ""}`}
-                onClick={() => { setSelectedCat1(cat); setPage(1); }}
+        {/* 좌측 필터: 데스크탑/태블릿만 */}
+        {!isMobile && (
+          <aside className="search-filter">
+            <div className="filter-group">
+              <div className="filter-label">시공별 카테고리</div>
+              {CATEGORY1.map(cat => (
+                <div
+                  key={cat}
+                  className={`filter-item${selectedCat1 === cat ? " active" : ""}`}
+                  onClick={() => { setSelectedCat1(cat); setPage(1); }}
+                >
+                  {cat}
+                </div>
+              ))}
+            </div>
+            <div className="filter-group">
+              <div className="filter-label">나무 / 식물별 카테고리</div>
+              {CATEGORY2.map(cat => (
+                <div
+                  key={cat}
+                  className={`filter-item${selectedCat2 === cat ? " active" : ""}`}
+                  onClick={() => { setSelectedCat2(cat); setPage(1); }}
+                >
+                  {cat}
+                </div>
+              ))}
+            </div>
+          </aside>
+        )}
+
+        {/* 모바일: 드롭다운 필터 */}
+        {isMobile && (
+          <div className="search-filter-mobile">
+            <div className="dropdown-group">
+              <button
+                className="dropdown-btn"
+                onClick={() => setCat1Open(open => !open)}
               >
-                {cat}
-              </div>
-            ))}
-          </div>
-          <div className="filter-group">
-            <div className="filter-label">나무 / 식물별 카테고리</div>
-            {CATEGORY2.map(cat => (
-              <div
-                key={cat}
-                className={`filter-item${selectedCat2 === cat ? " active" : ""}`}
-                onClick={() => { setSelectedCat2(cat); setPage(1); }}
+                시공별 카테고리: <b>{selectedCat1}</b>
+                <span className="dropdown-arrow">{cat1Open ? "▲" : "▼"}</span>
+              </button>
+              {cat1Open && (
+                <div className="dropdown-list">
+                  {CATEGORY1.map(cat => (
+                    <div
+                      key={cat}
+                      className={`dropdown-item${selectedCat1 === cat ? " active" : ""}`}
+                      onClick={() => {
+                        setSelectedCat1(cat);
+                        setPage(1);
+                        setCat1Open(false);
+                      }}
+                    >
+                      {cat}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div className="dropdown-group">
+              <button
+                className="dropdown-btn"
+                onClick={() => setCat2Open(open => !open)}
               >
-                {cat}
-              </div>
-            ))}
+                나무/식물별 카테고리: <b>{selectedCat2}</b>
+                <span className="dropdown-arrow">{cat2Open ? "▲" : "▼"}</span>
+              </button>
+              {cat2Open && (
+                <div className="dropdown-list">
+                  {CATEGORY2.map(cat => (
+                    <div
+                      key={cat}
+                      className={`dropdown-item${selectedCat2 === cat ? " active" : ""}`}
+                      onClick={() => {
+                        setSelectedCat2(cat);
+                        setPage(1);
+                        setCat2Open(false);
+                      }}
+                    >
+                      {cat}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
-        </aside>
+        )}
+
         {/* 우측 결과 */}
         <main className="search-main">
           <div className="search-result-header">

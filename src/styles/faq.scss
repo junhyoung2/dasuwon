@@ -5,6 +5,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+     @include mobile {
+        padding: 0 8px;
+    }
 }
 
 .faq-list {
@@ -13,22 +16,53 @@
     gap: 24px;
     max-width: 700px;
     align-items: center;
+      @include tablet {
+        max-width: 96vw;
+    }
+    @include mobile {
+        max-width: 100vw;
+        gap: 14px;
+    }
 }
 
 .faq-item {
-    margin-bottom: 0;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px 0 rgba(60, 80, 60, 0.06);
+
+     @include tablet {
+        padding: 16px 16px;
+        border-radius: 8px;
+    }
+    @include mobile {
+        padding: 12px 8px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 .faq-q {
    @include regular-font();
     margin-bottom: 4px;
     color: $color-font-1;
+     @include mobile {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
 }
 
 .faq-a {
      @include regular-font();
     color: $color-font-2;
     margin-left: 15px;
+     @include mobile {
+        margin-left: 6px;
+        font-size: 0.97rem;
+        line-height: 1.7;
+    }
 }
 
 .faq-more-btn {
@@ -40,6 +74,11 @@
     margin-left: 12px;
     margin-top: 8px;
     justify-content: flex-end;
+     @include mobile {
+        font-size: 0.97rem;
+        margin-left: 4px;
+        margin-top: 4px;
+    }
 }
 
 .faqdetail-container {
@@ -50,6 +89,16 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    @include tablet {
+        max-width: 96vw;
+        margin: 24px auto 0 auto;
+        padding: 0 8px;
+    }
+    @include mobile {
+        max-width: 100vw;
+        margin: 12px auto 0 auto;
+        padding: 0 4px;
+    }
 }
 .faqdetail-header {
     display: flex;
@@ -59,6 +108,12 @@
     width: 100%;
     max-width: 800px;
     gap: 18px;
+     @include mobile {
+       
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+    
 }
 .faqdetail-header h1 {
       @include large-font();
@@ -66,6 +121,11 @@
     margin: 0;
     letter-spacing: -1px;
     margin-right: auto;
+      @include mobile {
+       @include large-font();
+        letter-spacing: -0.2px;
+        margin-bottom: 2px;
+    }
 }
 .faqdetail-count {
   @include regular-font();
@@ -126,19 +186,4 @@
     border: 1.5px solid #b6d6c2;
 }
 
-@media (max-width: 700px) {
-    #faq,
-    #faqdetail {
-        padding: 20px 0 0 10px !important;
-    }
-    .faq-list {
-        max-width: 100%;
-        gap: 16px;
-    }
-    .faq-q {
-        font-size: 16px;
-    }
-    .faq-a {
-        font-size: 13px;
-    }
-}
+

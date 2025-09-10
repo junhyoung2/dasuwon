@@ -1,3 +1,5 @@
+
+
 #search {
     background: #fff;
     min-height: 100vh;
@@ -9,65 +11,180 @@
     margin: 0 auto;
     padding: 32px 0 0 0;
     box-sizing: border-box;
-     align-items: flex-start;
+    align-items: flex-start;
+
+    @include tablet {
+        max-width: 96vw;
+        padding: 18px 0 0 0;
+    }
+    @include mobile {
+        flex-direction: column;
+        max-width: 100vw;
+        padding: 10px 0 0 0;
+        align-items: stretch;
+    }
 }
+
 .search-filter {
-    width: 220px;
-    margin-right: 32px;
- 
+  width: 220px;
+  margin-right: 32px;
+  background: #f8faf8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60,80,60,0.06);
+  padding: 18px 14px;
+  min-width: 160px;
+
+  @include tablet {
+    width: 150px;
+    margin-right: 14px;
+    padding: 12px 8px;
+    border-radius: 8px;
+  }
+  @include mobile {
+    display: none;
+  }
 }
 
 .filter-group {
-    margin-bottom: 24px;
+  margin-bottom: 22px;
+  &:last-child { margin-bottom: 0; }
 }
+
 .filter-label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    @include regular-font();
+ @include regular-font();
+ font-weight: bold;
+  color: $color-primary;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
+
 .filter-item {
-    padding: 6px 0 6px 8px;
-    @include regular-font();
-    color: #444;
-    border-left: 3px solid transparent;
-    cursor: pointer;
-    margin-bottom: 2px;
-    transition: color 0.2s, border-color 0.2s;
-}
-.filter-item.active {
-    color: $color-primary;
-    border-left: 3px solid #25613e;
+  padding: 8px 0 8px 8px;
+@include regular-font();
+
+  color: $color-primary;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  margin-bottom: 2px;
+
+  &:hover {
+    background: #e6f2e6;
+    color: #25613e;
+  }
+  &.active {
+    background: #d2ecd2;
+    color: #25613e;
     font-weight: bold;
-    background: #f4f7f4;
+  }
 }
 
+/* 모바일 드롭다운 필터 */
+.search-filter-mobile {
+    display: none;
+    @include mobile {
+        display: block;
+        width: 100%;
+        margin-bottom: 14px;
+    }
+}
+.dropdown-group {
+    margin-bottom: 10px;
+}
+.dropdown-btn {
+    width: 100%;
+    background: #f4f7f4;
+    border: 1px solid #c7e2d0;
+    border-radius: 8px;
+    padding: 10px 14px;
+   @include regular-font();
+      color: $color-primary;
+    
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    gap: 20px;
+}
+.dropdown-arrow {
+    margin-left: auto;
+    font-size: 0.95em;
+}
+.dropdown-list {
+    background: #fff;
+    border: 1px solid #c7e2d0;
+    border-radius: 8px;
+    margin-top: 2px;
+    box-shadow: 0 2px 8px rgba(60,80,60,0.07);
+    z-index: 10;
+    position: relative;
+    
+}
+.dropdown-item {
+    padding: 10px 16px;
+    @include regular-font();
+      color: $color-primary;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.dropdown-item.active,
+.dropdown-item:hover {
+    background: #e6f2e6;
+    font-weight: bold;
+}
 
+/* 결과 영역 반응형 */
 .search-main {
     flex: 1;
     min-width: 0;
     background: #fafbfa;
     border-radius: 15px;
     box-shadow: 0 2px 12px 0 rgba(60, 80, 60, 0.06);
-  
     margin-bottom: 32px;
     transition: box-shadow 0.2s;
-    
+
+    @include tablet {
+        border-radius: 10px;
+        margin-bottom: 18px;
+    }
+    @include mobile {
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 0 2vw;
+    }
 }
 .search-result-header {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 18px;
-        @include regular-font();
-
+    @include regular-font();
     color: #222;
     min-height: 32px;
+
+    @include mobile {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
 }
 .search-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px 24px;
     margin-bottom: 32px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 12px;
+        margin-bottom: 18px;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 12px 0;
+        margin-bottom: 10px;
+    }
 }
 .search-card {
     background: #fff;
@@ -80,6 +197,17 @@
     min-height: 220px;
     transition: box-shadow 0.2s, transform 0.2s;
     cursor: pointer;
+
+    @include tablet {
+        border-radius: 8px;
+        min-height: 160px;
+        padding-bottom: 10px;
+    }
+    @include mobile {
+        border-radius: 6px;
+        min-height: 120px;
+        padding-bottom: 6px;
+    }
 }
 .search-card:hover {
     box-shadow: 0 4px 16px 0 rgba(60, 80, 60, 0.13);
@@ -93,22 +221,41 @@
     background-position: center;
     border-radius: 10px 10px 0 0;
     margin-bottom: 12px;
+
+    @include tablet {
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 8px;
+    }
+    @include mobile {
+        border-radius: 6px 6px 0 0;
+        margin-bottom: 10px;
+    }
 }
 .search-card-title {
     font-weight: bolder;
-       @include regular-font();
-    
+    @include regular-font();
     margin: 0 0 2px 0;
     padding-left: 12px;
     padding-top: 2px;
     letter-spacing: -0.5px;
+
+    @include mobile {
+        font-size: 1rem;
+        padding-left: 8px;
+    }
 }
 .search-card-sub {
-   @include regular-font();
+    @include regular-font();
     color: #888;
     padding-left: 12px;
     margin-bottom: 8px;
     letter-spacing: -0.2px;
+
+    @include mobile {
+        font-size: 0.95rem;
+        padding-left: 8px;
+        margin-bottom: 4px;
+    }
 }
 .search-card.empty {
     background: none;
@@ -121,6 +268,11 @@
     @include regular-font();
     user-select: none;
     letter-spacing: 2px;
+
+    @include mobile {
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
 }
 .search-pagination span {
     display: inline-block;
@@ -131,23 +283,16 @@
     border-radius: 4px;
     padding: 2px 8px;
     transition: background 0.15s;
+
+    @include mobile {
+        margin: 0 2px;
+        padding: 2px 6px;
+        font-size: 1rem;
+    }
 }
 .search-pagination .active {
     font-weight: bold;
     text-decoration: underline;
     background: #e6f2e6;
     color: #25613e;
-}
-
-@media (max-width: 900px) {
-    .search-main {
-        padding: 16px 4px 0 4px;
-    }
-    .search-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px 10px;
-    }
-    .search-filter {
-        display: none;
-    }
 }

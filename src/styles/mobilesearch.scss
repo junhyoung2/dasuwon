@@ -1,0 +1,57 @@
+.mobilesearch-overlay {
+  @media (max-width: 430px) {
+    position: fixed;
+    inset: 0;
+    background: #fff;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    animation: fadeIn 0.2s;
+  }
+}
+
+.mobilesearch-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.mobilesearch-box {
+  margin-top: 80px;
+  width: 90vw;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #3a7d44;
+  border-radius: 24px;
+  padding: 8px 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(60,80,60,0.06);
+}
+
+.mobilesearch-icon {
+  color: #3a7d44;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.mobilesearch-input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  background: transparent;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
