@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dasuwon/static/css/main.aaf55616.css",
+    "main.css": "/dasuwon/static/css/main.92e5ccca.css",
     "main.js": "/dasuwon/static/js/main.8707a60b.js",
     "index.html": "/dasuwon/index.html",
-    "main.aaf55616.css.map": "/dasuwon/static/css/main.aaf55616.css.map",
+    "main.92e5ccca.css.map": "/dasuwon/static/css/main.92e5ccca.css.map",
     "main.8707a60b.js.map": "/dasuwon/static/js/main.8707a60b.js.map"
   },
   "entrypoints": [
-    "static/css/main.aaf55616.css",
+    "static/css/main.92e5ccca.css",
     "static/js/main.8707a60b.js"
   ]
 }
