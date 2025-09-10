@@ -188,6 +188,7 @@ const Search = () => {
                 />
                 <div className="search-card-title">{item.title}</div>
                 <div className="search-card-sub">{item.subTitle}</div>
+             
               </div>
             ))}
             {/* 빈 칸 채우기 */}

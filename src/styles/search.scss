@@ -261,6 +261,9 @@
     background: none;
     box-shadow: none;
     pointer-events: none;
+      @include mobile {
+    display: none;
+  }
 }
 .search-pagination {
     text-align: center;
